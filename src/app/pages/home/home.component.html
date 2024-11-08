@@ -1,0 +1,25 @@
+<app-navbar/>
+<section>
+    <div class="flex justify-center items-center gap-4 flex-col">
+        <img src="banner.webp" alt="banner" class="w-[50%]"/>
+        <h1 class="text-[#E7B22F] text-4xl font-bold">The Dragon Ball API</h1>
+    </div>
+</section>
+<div class="flex flex-col gap-4 w-[80%] mx-auto">
+  <h2 class="text-white text-2xl font-bold">Personajes de Dragon Ball</h2>
+  <div class="characters-grid justify-center">
+    <app-card *ngFor="let character of characters" [character]="character" (id)="getCharacterIdHandler($event)"/>
+  </div>
+</div>
+
+<!-- Modificamos el modal -->
+<p-dialog 
+    [header]="selectedCharacter?.name || 'Detalles del personaje'" 
+    [modal]="true"
+    [(visible)]="visible" 
+    [style]="{ width: '50rem', backgroundColor: 'white' }" 
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+    <div *ngIf="selectedCharacter">
+        <pre>{{ selectedCharacter | json }}</pre>
+    </div>
+</p-dialog>

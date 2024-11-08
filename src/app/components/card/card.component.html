@@ -1,0 +1,12 @@
+<div class="rounded-lg">
+    <div class="flex justify-center bg-white p-4 rounded-lg">
+        <img [src]="character.image" alt="{{ character.name }}" (click)="id.emit(character.id)"
+        class="cursor-pointer hover:scale-125 transition-all duration-300 h-[400px] rounded-lg"/>
+    </div>
+    <div class="flex flex-col gap-2 bg-[#3C3E44] p-2">
+        <h3 class="text-white font-bold text-2xl">{{ character.name }}</h3>
+        <p class="text-[#E7B22F] font-bold text-xl">Ki: {{ character.ki }}</p>
+        <p class="text-[#E7B22F] font-bold">Max Ki: {{ character.maxKi }}</p>
+        <p class="text-[#E7B22F] font-bold">Raza: {{ character.race }}</p>
+    </div>
+</div>
