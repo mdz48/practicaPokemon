@@ -1,12 +1,12 @@
-<div class="rounded-lg">
-    <div class="flex justify-center bg-white p-4 rounded-lg">
-        <img [src]="character.sprites.front_default" alt="{{ character.name }}"
-        class="cursor-pointer hover:scale-125 transition-all duration-300 h-[400px] rounded-lg"/>
+<div class="rounded-lg shadow-lg border-4 border-[#e3dd32]">
+    <div class="flex justify-center bg-[#283494] p-4 rounded-t-lg">
+        <img [src]="character.sprites.other['official-artwork'].front_default" alt="{{ character.name }}"
+        class="cursor-pointer hover:scale-125 hover:border-none hover:rounded transition-all duration-300 h-[300px]  "/>
     </div>
-    <div class="flex flex-col gap-2 bg-[#3761A8] p-2">
-        <h3 class="text-white font-bold text-2xl">{{ character.name | titlecase }}</h3>
-        <p class="text-[#E7B22F] font-bold text-xl">Height: {{ character.height }}</p>
-        <p class="text-[#E7B22F] font-bold">Weight: {{ character.weight }}</p>
-        <p class="text-[#E7B22F] font-bold">Base Experience: {{ character.base_experience }}</p>
+    <div class="flex flex-col gap-2 bg-[#e3dd32] p-4 text-[#FFFFFF]">
+        <h3 class="font-bold text-3xl text-center">{{ character.name | titlecase }}</h3>
+        <p class="font-medium text-xl">Height: {{ character.height }}</p>
+        <p class="font-medium text-xl">Weight: {{ character.weight }}</p>
+        <p class="font-medium text-xl">Base Experience: {{ character.base_experience }}</p>
     </div>
 </div>

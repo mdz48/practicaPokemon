@@ -15,6 +15,11 @@ export interface ICharacter {
     sprites: {
         front_default: string;
         back_default: string;
+        other: {
+            "official-artwork": {
+                front_default: string;
+            };
+        };
     };
     types: Array<{
         type: {
