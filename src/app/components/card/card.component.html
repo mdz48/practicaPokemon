@@ -1,12 +1,28 @@
-<div class="rounded-lg shadow-lg border-4 border-[#e3dd32]">
-    <div class="flex justify-center bg-[#283494] p-4 rounded-t-lg">
-        <img [src]="character.sprites.other['official-artwork'].front_default" alt="{{ character.name }}"
-        class="cursor-pointer hover:scale-125 hover:border-none hover:rounded transition-all duration-300 h-[300px]  "/>
+<div class="max-w-[300px] rounded-lg shadow-2xl border-[6px] border-[#FFCB05] bg-gradient-to-b from-[#FF5733] to-[#FFC300] ">
+    <!-- Sección superior con el nombre y detalles -->
+    <div class="bg-[#FFCB05] border-b-[3px] border-[#FF0000] p-2 flex justify-between items-center">
+        <div class="flex justify-between items-center">
+            <span class="text-sm font-bold text-[#3B4CCA] uppercase">Pokémon</span>
+            <h2 class="text-xl font-bold text-[#3B4CCA]">{{ character.name | titlecase }}</h2>
+            <span class="text-sm font-bold text-[#FF0000]">HP {{ character.base_experience }}</span>
+        </div>
     </div>
-    <div class="flex flex-col gap-2 bg-[#e3dd32] p-4 text-[#FFFFFF]">
-        <h3 class="font-bold text-3xl text-center">{{ character.name | titlecase }}</h3>
-        <p class="font-medium text-xl">Height: {{ character.height }}</p>
-        <p class="font-medium text-xl">Weight: {{ character.weight }}</p>
-        <p class="font-medium text-xl">Base Experience: {{ character.base_experience }}</p>
+
+    <!-- Imagen del Pokémon -->
+    <div class="flex justify-center p-4">
+        <img [src]="character.sprites.front_default" alt="{{ character.name }}"
+        class="h-[180px] w-[180px] object-contain"/>
+    </div>
+
+    <!-- Detalles -->
+    <div class="p-4 bg-[#FFC300]">
+        <p class="text-sm font-medium text-[#3B4CCA]">Height: {{ character.height }}</p>
+        <p class="text-sm font-medium text-[#3B4CCA]">Weight: {{ character.weight }}</p>
+        <p class="text-sm font-medium text-[#3B4CCA]">Base Experience: {{ character.base_experience }}</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-[#FFCB05] p-2 text-xs text-[#3B4CCA] italic border-t-[3px] border-[#FF0000]">
+        <p>No. {{ character.id }}</p>
     </div>
 </div>
