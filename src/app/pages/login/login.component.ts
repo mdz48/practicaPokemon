@@ -21,8 +21,7 @@ constructor(private router: Router, private authService: AuthService) {
 
 login() {
   if (this.loginForm.valid) {
-    localStorage.setItem('user', JSON.stringify(this.loginForm.value));
-
+    this.authService.login(this.loginForm.value);
     this.router.navigate(['/home']);
   } else {
     alert('Rellene los campos correctamente');
