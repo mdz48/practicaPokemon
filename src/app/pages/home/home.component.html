@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
-<div class="flex flex-wrap justify-center gap-4 p-4 ">
-    <app-card *ngFor="let character of pokemons" [character]="character"></app-card>
-</div>
+<main class="flex justify-center">
+
+    <div class="grid grid-cols-4 gap-4 p-4 justify-center ">
+        <app-card *ngFor="let character of pokemons" [character]="character"></app-card>
+    </div>
+</main>
