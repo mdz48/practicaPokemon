@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
+import { CharacterComponent } from '../character/character.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent, CharacterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
