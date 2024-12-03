@@ -1,2 +1,4 @@
 <app-navbar></app-navbar>
-<app-character></app-character>
+<div class="flex flex-wrap justify-center gap-4 p-4">
+    <app-card *ngFor="let character of pokemons" [character]="character"></app-card>
+</div>

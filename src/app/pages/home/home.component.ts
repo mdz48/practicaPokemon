@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { CharacterComponent } from '../character/character.component';
+import { CardComponent } from '../../components/card/card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, CharacterComponent],
+  imports: [NavbarComponent, CardComponent, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
